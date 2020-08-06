@@ -1,0 +1,23 @@
+.Sitehead {
+    background-color: aquamarine;
+color: #1d2f29;
+height:100vh ;
+font-family: monospace ;
+margin:0;
+display: flex ;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.Ytlink{
+    color: #1d2f29;
+}
+
+
+.Profilepic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: #619a59 2px 5px 5px;
+}
