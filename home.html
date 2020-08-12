@@ -1,12 +1,35 @@
 <html><head>
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>
     Home | Saif Khan
     </title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="theme-color" content="#619a59" />
-   
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myTopbar");
+        if (x.className === "Topbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "Topbar";
+        }
+      }
+       </script>
+
+<div class="Topbar" id="myTopbar">
+    <a class="active" href="https://saif123.netlify.app/">Home</a>
+    <a href="">My Trips</a>
+    <a href="">Gaming</a>
+    <a href="">The Roadblock</a>
+    <a href="">Contact Me</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+</div>
+
     </head>
     <body class=Bodyclass>
     <header  class="Sitehead" >
