@@ -1,0 +1,80 @@
+<html>
+<head>
+    <link href="css/gal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Saif's Gallery
+    </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="theme-color" content="#619a59" />
+    <div class="Topbar" id="myTopbar">
+        <a class="active" href="https://saif123.netlify.app/">Home</a>
+        <a href="">Projects</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="">Contact Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    
+    </div>
+    <div class="headclass"> <h1>This is basically a JavaSript Project</h1></div>
+</head>
+<body>
+  
+    <div class="container">
+       
+        <button type="button" class="btn Prevbtn">Prev</button>
+        <button type="button" class="btn Nextbtn">Next</button>
+    </div>
+    
+</body>
+<script>
+const nextbtn= document.querySelector('.Nextbtn');
+const prevbtn= document.querySelector('.Prevbtn');
+const slider= document.querySelector('.container');
+
+let counter=  1;
+
+nextbtn.addEventListener('click',nextslide);
+prevbtn.addEventListener('click',prevslide);
+
+function nextslide(){
+    counter++;
+    if(counter>9){
+        counter=1
+    }
+
+    slider.style.backgroundImage = `url(img/slider/img-${counter}.png)`
+   
+
+}
+function prevslide(){
+    counter--;
+    if(counter<1){
+        counter=9
+    }
+
+    slider.style.backgroundImage = `url(img/slider/img-${counter}.png)`
+   
+
+}
+function myFunction() {
+        var x = document.getElementById("myTopbar");
+        if (x.className === "Topbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "Topbar";
+        }
+      }
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>
