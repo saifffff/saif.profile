@@ -7,25 +7,29 @@
     </title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="theme-color" content="#619a59" />
-    <div class="Topbar" id="myTopbar">
-        <a class="active" href="https://saif123.netlify.app/">Home</a>
-        <a href="">Projects</a>
-        <a href="Gallery.html">Gallery</a>
-        <a href="">Contact Me</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
     
-    </div>
-    <div class="headclass"> <h1>This is basically a JavaSript Project</h1></div>
+   
 </head>
 <body>
-  
+    <section>
+        <div class="Topbar" id="myTopbar">
+            <a class="active" href="https://saif123.netlify.app/">Home</a>
+            <a href="">Projects</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="">Contact Me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        
+        </div>
+    <div class="headclass"> <h1>This is basically a JavaSript Project</h1></div>
     <div class="container">
        
         <button type="button" class="btn Prevbtn">Prev</button>
         <button type="button" class="btn Nextbtn">Next</button>
     </div>
+
+    </section>
     
 </body>
 <script>
@@ -58,7 +62,10 @@ function prevslide(){
    
 
 }
-function myFunction() {
+
+</script>
+<script>
+    function myFunction() {
         var x = document.getElementById("myTopbar");
         if (x.className === "Topbar") {
           x.className += " responsive";

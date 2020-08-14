@@ -1,76 +1,69 @@
-.headclass{
-    position: absolute;
-    top:1%;
-    left: 25%;
-    padding: 20px 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-transform: capitalize;
-    color: honeydew;
-}
-.headclass h1{
-    color: black;
-}
+*{margin: 0;padding: 0;box-sizing: border-box;}
 body{
-   min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('../img/slider/bgc.jpg.jpg')center/cover no-repeat;
+  background: url(../img/slider/bgc.jpg.jpg)center/cover no-repeat;
 }
-.container{
-    background: url('../img/slider/img-1.png')center/cover no-repeat;
-    min-height: 65vh;
-    flex: 0 0 60%;
-    background-color: blue;
-    border-radius: 15px;
-    box-shadow: 7px 10px black;
-    position: relative;
-
-
-
-}
-.btn{
-    display:inline-block;
-    background-color: #857a72;
-    color: whitesmoke;
-    border: 2px solid #093002;
-    border-radius: 15px;
-    box-shadow: 2px 4px black;
-    font-size: 1.3rem;
-    padding: 0.5rem;
-    outline: none;
-
-
-}
-.prevBtn{
-    position: absolute;
-    top:50%;
-    left:0;
-    transform: translate(-50%,-50%);
-}
-.nextBtn{
-    position: absolute;
-    top:50%;
-    right:0;
-    transform: translate(50%,-50%);
-}
-.btn:active{
-    background-color: black;
-    box-shadow:1px 1px grey;
-
-}
-.btn:hover{
-    background: #6d736c;
-    color: white;
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
 .Topbar{
-    position: absolute;
-    top: 1px;
-    min-width: 100%;
+   min-width: 100%;
     background-color: #333;
     overflow: hidden;
 
 }
+.container{
+ 
+  width: 80%;
+  background: url(../img/slider/img-1.png)center/cover;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  min-height: 65vh;
+  
+  border-radius: 15px;
+  position: relative;
+  
+
+  
+}
+.btn{
+  display:inline-block;
+  background-color: #857a72;
+  color: whitesmoke;
+  border: 2px solid #093002;
+  border-radius: 15px;
+  box-shadow: 2px 4px black;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  outline: none;
+
+
+}
+
+.prevBtn{
+  position: absolute;
+  top:50%;
+  left:0;
+  transform: translate(-50%,-50%);
+}
+.nextBtn{
+  position: absolute;
+  top:50%;
+  right:0;
+  transform: translate(50%,-50%);
+}
+.btn:active{
+  background-color: black;
+  box-shadow:1px 1px grey;
+
+}
+.btn:hover{
+  background: #6d736c;
+  color: white;
+}
+
 .Topbar a{
     float: left;
   color: #f2f2f2;
@@ -100,7 +93,7 @@ body{
   }
 
   @media screen and (max-width: 600px) {
-    .Topbar.responsive {position: relative;}
+    .Topbar.responsive {position:relative;}
     .Topbar.responsive a.icon {
       position: absolute;
       right: 0;
