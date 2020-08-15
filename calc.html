@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/calc.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Projects-Calc</title>
+</head>
+<body>
+    <section class="calc">
+        <form>
+        <input type="text" name="" id="" class="screen">
+        </form>
+    <div class="btns">
+        <!--Ybtns-->
+        <button type="button" class="Btn ybtn" data-num="+">+</button>
+        <button type="button" class="Btn ybtn" data-num="-">-</button>
+        <button type="button" class="Btn ybtn" data-num="/">/</button>
+        <button type="button" class="Btn ybtn" data-num="*">*</button>
+        <!--Gbtns-->
+        <button type="button" class="Btn gbtn" data-num=".">.</button>
+        <button type="button" class="Btn gbtn" data-num="9">9</button>
+        <button type="button" class="Btn gbtn" data-num="8">8</button>
+        <button type="button" class="Btn gbtn" data-num="7">7</button>
+        <button type="button" class="Btn gbtn" data-num="6">6</button>
+        <button type="button" class="Btn gbtn" data-num="5">5</button>
+        <button type="button" class="Btn gbtn" data-num="4">4</button>
+        <button type="button" class="Btn gbtn" data-num="3">3</button>
+        <button type="button" class="Btn gbtn" data-num="2">2</button>
+        <button type="button" class="Btn gbtn" data-num="1">1</button>
+        <button type="button" class="Btn gbtn" data-num="0">0</button>
+        <button type="button" class="Btn-eqbtn" >=</button>
+        <button type="button" class="cbtn" >C</button>
+
+
+    </div>
+
+
+
+    </section>
+</body>
+<script>
+
+    const bttn=document.querySelectorAll('.Btn');
+    const scrn=document.querySelector('.screen');
+    const eqvBtn=document.querySelector('.Btn-eqbtn');
+    const clr=document.querySelector('.cbtn');
+    
+
+    for( let i=0; i < bttn.length; i++ ){
+        bttn[i].addEventListener('click', function() {
+            let x=bttn[i].getAttribute('data-num');
+            scrn.value += x})
+        }
+
+ eqvBtn.addEventListener('click', function(){
+     let value = eval(scrn.value);
+     scrn.value = value ;
+ } )
+
+clr.addEventListener('click', function(){
+    value = "";
+    scrn.value=value;
+} )
+
+</script>
+</html>
