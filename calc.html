@@ -8,7 +8,18 @@
     <title>Projects-Calc</title>
 </head>
 <body>
+    <div class="Topbar" id="myTopbar">
+        <a href="https://saif123.netlify.app/">Home</a>
+        <a class="active" href="calc.html">Projects</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="">Contact Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    
+    </div>
     <section class="calc">
+       
         <form>
         <input type="text" name="" id="" class="screen">
         </form>
@@ -64,5 +75,15 @@ clr.addEventListener('click', function(){
     scrn.value=value;
 } )
 
+</script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopbar");
+        if (x.className === "Topbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "Topbar";
+        }
+      }
 </script>
 </html>
