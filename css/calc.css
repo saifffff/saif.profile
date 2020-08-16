@@ -95,4 +95,14 @@ button{
       text-align: left;
     }
   }
- 
+ .nxt{
+   background-color: teal;
+   color: azure;
+   font-size: medium;
+   padding: 2px;
+   font-weight: bold;
+   position: relative;
+   top: 70px;
+   left: 40%;
+
+ }
