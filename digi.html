@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/digi.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <title>Project-Digi-Clock</title>
+    
+</head>
+<body>
+    <div class="Topbar" id="myTopbar">
+        <a href="https://saif123.netlify.app/">Home</a>
+        <a class="active" href="calc.html">Projects</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="">Contact Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    
+    </div>
+    
+    <div id="clock">
+
+    </div>
+    <button class="nxt" onclick="location.href='digi.html'" type="button">NEXT PROJECT</button>
+
+
+    
+</body>
+<script>
+    setInterval(showTime,1000);
+function showTime(){
+    let time = new Date();
+    let hour=time.getHours();
+    let min=time.getMinutes();
+    let sec=time.getSeconds();
+    am_pm="AM";
+
+    if(hour>12){
+        hour-=12;
+        am_pm="PM"
+    
+    }
+    if(hour==0){
+        hour=12;
+        am_pm="AM";
+    }
+    if(hour<10){
+        hour="0"+hour;
+    }
+    if(min<10){
+        min="0"+min;
+    }
+    if(sec<10){
+        sec="0"+sec;
+    }
+
+
+    let currentTime = hour + ":" 
+            + min + ":" + sec + am_pm; 
+  
+    document.getElementById("clock") 
+            .innerHTML = currentTime; 
+
+}
+showTime();
+</script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopbar");
+        if (x.className === "Topbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "Topbar";
+        }
+      }
+</script>
+
+</html>
